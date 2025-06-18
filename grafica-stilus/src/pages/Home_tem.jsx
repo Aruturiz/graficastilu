@@ -1,6 +1,13 @@
+import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
+
 function Home_tem(){
     return(
-    <h1>ola mundo</h1>
+    <div>
+        <NavBar />
+    <h1>home</h1>
+    </div>
     )
+   
 }
 export default Home_tem
