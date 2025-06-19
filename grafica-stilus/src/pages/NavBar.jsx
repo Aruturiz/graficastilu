@@ -1,17 +1,32 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/imagens/logo.jpg';
 
 function NavBar(){
     return(
-    <nav className="bg-blue-400 text-white p-6 shadow-md">
-      <div className="container mx-auto flex items-center ">
+    <nav className="bg-blue-400 text-white shadow-md p-2">
+      <div className="flex justify-between items-center px-6 py-2">
         
-        <ul className="hidden md:flex space-x-7 ml-auto">
-          <li className="hover:text-gray-300 "> <Link to="/home">Home</Link> </li>
-          <li className="hover:text-gray-300"><Link to="/produtos">Produtos</Link></li>
-          <li className="hover:text-gray-300">Sobre</li>
+        
+        <div className="flex-shrink-0">
+         <Link to="/home"> <img src={logo} alt="Logo" className=" w-20 h-20 rounded-full ml-15" /></Link>
+        </div>
+        
+        
+        <ul className="flex space-x-5  mr-15 ">
+          <li className="hover:text-gray-200">
+            <Link to="/home">Home</Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link to="/produtos">Produtos</Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link to="/contato">Contato</Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link to="/sobre">Sobre</Link>
+          </li>
         </ul>
-
-         </div>
+      </div>
     </nav>
     )
 }

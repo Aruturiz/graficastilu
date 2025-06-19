@@ -8,6 +8,10 @@ import Produtos from './pages/produtos.jsx'
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <Home_tem />
+  },
+  {
     path: "/home",
     element: <Home_tem />
   },

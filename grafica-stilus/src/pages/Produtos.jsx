@@ -1,6 +1,10 @@
+import NavBar from "./NavBar"
+
 function Produtos(){
 return (
-    <h1>pagina de produtos</h1>
+    <div>
+        <NavBar />
+    </div>
 )
 }
 export default Produtos
