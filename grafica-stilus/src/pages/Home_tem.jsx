@@ -59,7 +59,7 @@ function Home_tem() {
             className="flex transition-transform duration-[2000ms] ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
-              width: `${cards.length * 25}%`,
+              width: `50%`,
             }}
           >
             {cards.map((card, index) => (
