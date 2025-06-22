@@ -54,7 +54,7 @@ function Home_tem() {
 
         <div className="ml-10 max-w-3xl">
           <h1 className="font-medium text-amber-100 text-6xl text-left">
-            A <strong>Gráfica</strong> que você <br /> idealiza para seus <br /> projetos
+            A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos
           </h1>
 
           <p className="text-amber-100 mt-10 leading-relaxed text-2xl">
@@ -67,9 +67,9 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="bg-fuchsia-500 py-20">
-        <div className="bg-blue-400 rounded-3xl p-10 m-10">
-          <h1 className="text-center text-amber-100 text-5xl font-bold mb-10">OFERTAS</h1>
+      <div className="bg-fuchsia-500 py-30">
+        <div className="bg-blue-400 rounded-3xl p-10 m-15  mr-60 ml-60 my-5">
+          <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 ">OFERTAS</h1>
       </div>
 
 
@@ -92,13 +92,18 @@ function Home_tem() {
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                     <img></img>
                     <p className="text-gray-700 text-center">{card.descricao}</p>
-                    <button className="bg-blue-400 w-25 h-10 rounded-4xl "></button>
+                    <button className="bg-blue-400 w-25 h-10 rounded-4xl my-10 hover:size-30 ">
+                      <h1 className='text-amber-100 font'>Pedir</h1>
+                    </button>
                   </div>
                 </div>
               ))}
             
           </div>
         </div>
+      </div>
+      <div className='bg-amber-300 p-80'>
+
       </div>
     </div>
   );
