@@ -4,6 +4,7 @@ function Produtos(){
 return (
     <div>
         <NavBar />
+        
     </div>
 )
 }
