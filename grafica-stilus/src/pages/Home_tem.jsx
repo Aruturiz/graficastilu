@@ -67,7 +67,7 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="bg-fuchsia-500 py-30">
+      <div className="bg-fuchsia-600 py-30">
         <div className="bg-blue-400 rounded-3xl p-10 m-15  mr-60 ml-60 my-5">
           <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 ">OFERTAS</h1>
       </div>
