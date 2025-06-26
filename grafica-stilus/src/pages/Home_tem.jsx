@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
 import degrade from '../assets/Imagens/home/degrade.png';
+import grafico from '../assets/Imagens/home/grafico.png';
 
 function Home_tem() {
   const cards = [
-    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.' },
+    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem: '../assets/Imagens/home/foto1.jpg' },
     { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.' },
     { titulo: 'Adesivos Promocionais', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.' },
     { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.' },
@@ -67,8 +68,8 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="bg-fuchsia-600 py-30">
-        <div className="bg-blue-400 rounded-3xl p-10 m-15  mr-60 ml-60 my-5">
+      <div className="rosa py-30">
+        <div className="bg-blue-400 rounded-3xl p-10 m-1   mr-60 ml-60 -my-10">
           <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 ">OFERTAS</h1>
       </div>
 
@@ -88,7 +89,7 @@ function Home_tem() {
                   className="flex-shrink-0 p-4"
                   style={{ width: `${cardWidth}px` }}
                 >
-                  <div className="bg-white rounded-xl shadow-lg p-5 h-64 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                  <div className="bg-white rounded-xl shadow-lg p-5 h-64 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-30">
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                     <img></img>
                     <p className="text-gray-700 text-center">{card.descricao}</p>
@@ -103,7 +104,7 @@ function Home_tem() {
         </div>
       </div>
       <div className='bg-amber-300 p-80'>
-
+              <img src={grafico} />
       </div>
     </div>
   );
