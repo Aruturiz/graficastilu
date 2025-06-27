@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
 import degrade from '../assets/Imagens/home/degrade.png';
 import grafico from '../assets/Imagens/home/grafico.png';
+import Footer from './footer';
 
 function Home_tem() {
   const cards = [
@@ -68,8 +69,8 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="rosa py-30">
-        <div className="bg-blue-400 rounded-3xl p-10 m-1   mr-60 ml-60 -my-10">
+      <div className="bg-blue-600 py-30">
+        <div className=" rounded-3xl py-5  mr-80 ml-80 -my-20">
           <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 ">OFERTAS</h1>
       </div>
 
@@ -103,9 +104,14 @@ function Home_tem() {
           </div>
         </div>
       </div>
-      <div className='bg-amber-300 p-80'>
-              <img src={grafico} />
+      <div className='bg-blue-600 '>
+        <div className='flex flex-auto'>
+              <img src={grafico} className='flex '/>
+              <h1 className='m-30 text-7xl font text-amber-100 font-bold'> Nossos Serviços</h1>
+              <p></p>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
