@@ -3,15 +3,16 @@ import NavBar from './NavBar';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
 import degrade from '../assets/Imagens/home/degrade.png';
 import grafico from '../assets/Imagens/home/grafico.png';
+import you from '../assets/Imagens/home/you.png';
 import Footer from './footer';
 
 function Home_tem() {
   const cards = [
-    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem: '../assets/Imagens/home/foto1.jpg' },
-    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.' },
-    { titulo: 'Adesivos Promocionais', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.' },
-    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.' },
-    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.' },
+    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem:you },
+    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.',imagem:you },
+    { titulo: 'Adesivos ', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',  imagem:you },
+    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.',imagem:you },
+    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.',imagem:you},
   ];
 
   const cardWidth = 320;
@@ -69,9 +70,9 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="bg-blue-600 py-30">
+      <div className="bg-blue-600 py-15">
         <div className=" rounded-3xl py-5  mr-80 ml-80 -my-20">
-          <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 ">OFERTAS</h1>
+          <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 m-5">OFERTAS</h1>
       </div>
 
 
@@ -91,8 +92,11 @@ function Home_tem() {
                   style={{ width: `${cardWidth}px` }}
                 >
                   <div className="bg-white rounded-xl shadow-lg p-5 h-64 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-30">
+                    
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
-                    <img></img>
+                    {card.imagem && (
+                  <img src={card.imagem} alt={card.titulo} className="w-24 h-24 object-contain mb-2" />
+                    )}
                     <p className="text-gray-700 text-center">{card.descricao}</p>
                     <button className="bg-blue-400 w-25 h-10 rounded-4xl my-10 hover:size-30 ">
                       <h1 className='text-amber-100 font'>Pedir</h1>
@@ -104,11 +108,11 @@ function Home_tem() {
           </div>
         </div>
       </div>
-      <div className='bg-blue-600 '>
-        <div className='flex flex-auto'>
-              <img src={grafico} className='flex '/>
-              <h1 className='m-30 text-7xl font text-amber-100 font-bold'> Nossos Serviços</h1>
-              <p></p>
+      <div className='bg-blue-600 h-120'>
+        <div className='flex flex-auto '>
+              <img src={grafico} className='flex -my-20'/>
+              <h1 className=' text-7xl font text-amber-100 font-bold'> Nossos Serviços</h1>
+              <p className='font m-5'>owincownc</p>
         </div>
       </div>
       <Footer />
