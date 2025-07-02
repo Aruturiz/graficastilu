@@ -111,8 +111,10 @@ function Home_tem() {
       <div className='bg-blue-600 h-120'>
         <div className='flex flex-auto '>
               <img src={grafico} className='flex -my-20'/>
+              <div>
               <h1 className=' text-7xl font text-amber-100 font-bold'> Nossos Serviços</h1>
-              <p className='font m-5'>owincownc</p>
+              <p className='font '>owincownc</p>
+              </div>
         </div>
       </div>
       <Footer />
