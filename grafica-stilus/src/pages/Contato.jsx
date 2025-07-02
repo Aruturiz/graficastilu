@@ -8,15 +8,13 @@ function Contato() {
       <NavBar />
 
       {/* Cabeçalho */}
-      <div className="relative min-h-[50vh] flex flex-col justify-center items-center bg-gradient-to-br from-blue-700 to-blue-900 text-amber-100 p-10">
-        <h1 className="text-5xl font-bold mb-4">Fale Conosco</h1>
-        <p className="text-xl max-w-2xl text-center">
-          Tem dúvidas, sugestões ou quer fazer um orçamento? Estamos prontos para atender você!
-        </p>
+      <div className="relative min-h-[50vh] flex flex-col justify-center items-center bg-gradient-to-br font from-blue-700 to-blue-500 text-amber-100 p-2">
+        <h1 className="text-5xl font-bold mb-2">Fale Conosco</h1>
+        
       </div>
 
       {/* Seção de Contato */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 p-10 bg-blue-100">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 p-10 bg-blue-500">
 
         {/* Formulário */}
         <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -55,8 +53,8 @@ function Contato() {
         </form>
 
         {/* Informações de Contato */}
-        <div className="flex flex-col items-center text-center">
-          <img src={grafico} alt="Contato" className="w-48 h-48 mb-4" />
+        <div className="flex flex-col items-center text-center m-30">
+          <img src={grafico} alt="Contato" className="w-100 h-100 mb-4" />
           <h2 className="text-2xl font-bold text-blue-700 mb-2">Atendimento</h2>
           <p className="text-gray-700 mb-2">Portalegre - RN</p>
           <p className="text-gray-700 mb-2">WhatsApp: (84) 99999-9999</p>
