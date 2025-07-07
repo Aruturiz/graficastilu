@@ -8,7 +8,7 @@ function Contato() {
       <NavBar />
 
       {/* Cabeçalho */}
-      <div className="relative min-h-[50vh] flex flex-col justify-center items-center bg-gradient-to-br font from-blue-700 to-blue-500 text-amber-100 p-2">
+      <div className="relative min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-br font from-blue-700 to-blue-500 text-amber-100 p-2">
         <h1 className="text-5xl font-bold mb-2">Fale Conosco</h1>
         
       </div>
@@ -52,16 +52,7 @@ function Contato() {
           </button>
         </form>
 
-        {/* Informações de Contato */}
-        <div className="flex flex-col items-center text-center m-30">
-          <img src={grafico} alt="Contato" className="w-100 h-100 mb-4" />
-          <h2 className="text-2xl font-bold text-blue-700 mb-2">Atendimento</h2>
-          <p className="text-gray-700 mb-2">Portalegre - RN</p>
-          <p className="text-gray-700 mb-2">WhatsApp: (84) 99999-9999</p>
-          <p className="text-gray-700 mb-2">E-mail: contato@suaempresa.com</p>
-          <p className="text-gray-700">Siga-nos nas redes sociais!</p>
-        </div>
-
+        
       </div>
 
       <Footer />

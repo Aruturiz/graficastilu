@@ -50,7 +50,7 @@ function Home_tem() {
         <img
           src={degrade}
           alt=""
-          className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+          className="absolute top-0 left-0 w-full h-full bg-cover -z-20"
         />
 
         <img src={foto1} alt="foto_da_frente" className="ml-10 w-[400px] h-auto rounded-xl" />
@@ -91,15 +91,15 @@ function Home_tem() {
                   className="flex-shrink-0 p-4"
                   style={{ width: `${cardWidth}px` }}
                 >
-                  <div className="bg-white rounded-xl shadow-lg p-5 h-64 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-30">
+                  <div className="bg-white rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-30">
                     
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                     {card.imagem && (
                   <img src={card.imagem} alt={card.titulo} className="w-24 h-24 object-contain mb-2" />
                     )}
                     <p className="text-gray-700 text-center">{card.descricao}</p>
-                    <button className="bg-blue-400 w-25 h-10 rounded-4xl my-10 hover:size-30 ">
-                      <h1 className='text-amber-100 font'>Pedir</h1>
+                    <button className="rosa w-25 h-10 rounded-4xl my-10 hover:scale-x-120 ">
+                      <h1 className='text-amber-100 text-1xl font'>Pedir</h1>
                     </button>
                   </div>
                 </div>
@@ -108,12 +108,18 @@ function Home_tem() {
           </div>
         </div>
       </div>
-      <div className='bg-blue-600 h-120'>
+      <div className='bg-blue-700 h-'>
         <div className='flex flex-auto '>
-              <img src={grafico} className='flex -my-20'/>
+              <img src={grafico} className='flex m-5'/>
+              <div className='m-5 my-20'>
+              <h1 className=' text-7xl font m-5 text-amber-100 font-bold'> Nossos Serviços</h1>
               <div>
-              <h1 className=' text-7xl font text-amber-100 font-bold'> Nossos Serviços</h1>
-              <p className='font '>owincownc</p>
+              <p className='font text-amber-100 text-2xl'>Se você procura qualidade e confiança para seus materiais gráficos,
+                 está no lugar certo. Aqui, cuidamos de cada detalhe para que seu projeto ganhe vida 
+                 com o acabamento e a apresentação que ele merece. Produzimos desde cartões de visita,
+                  panfletos, banners e adesivos, até convites especiais, folders e papelaria 
+                  personalizada.</p>
+              </div>
               </div>
         </div>
       </div>

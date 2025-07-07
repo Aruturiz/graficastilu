@@ -17,11 +17,9 @@ function Produtos() {
       <NavBar />
 
       {/* Cabeçalho da Página */}
-      <div className="relative min-h-[50vh] flex flex-col justify-center items-center bg-gradient-to-br from-blue-700 to-blue-900 text-amber-100 p-10">
+      <div className="relative min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-br to-blue-700 from-blue-900 text-amber-100 p-5">
         <h1 className="text-5xl font-bold mb-4">Nossos Produtos</h1>
-        <p className="text-xl max-w-2xl text-center">
-          Transforme suas ideias em materiais de alta qualidade. Confira as soluções que oferecemos para valorizar sua marca!
-        </p>
+        
       </div>
 
       {/* Lista de Produtos */}

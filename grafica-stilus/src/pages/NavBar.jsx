@@ -3,7 +3,7 @@ import logo from '../assets/imagens/logo.jpg';
 
 function NavBar(){
     return(
-    <nav className="bg-blue-400 text-white shadow-md p-2">
+    <nav className=" text-white bg-blue-800  ">
       <div className="flex justify-between items-center px-6 py-2">
         
         
