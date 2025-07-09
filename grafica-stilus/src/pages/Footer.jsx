@@ -28,7 +28,7 @@ return (
       <ul class="text-sm space-y-1">
         <li>📞 (84) 99999-9999</li>
         <li>📧 contato@graficacriativa.com</li>
-        <li>📍 Rua Exemplo, 123 – Sua Cidade</li>
+        <li>📍 Rua Fracisco Vitor, 165 – Serrinha dos Pintos</li>
       </ul>
     </div>
 
