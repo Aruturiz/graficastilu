@@ -5,7 +5,7 @@ return (
 
    
     <div className="m-5">
-      <h4 class="text-xl font-bold mb-3">Gráfica Criativa</h4>
+      <h4 class="text-xl font-bold mb-3">Gráfica Stilus</h4>
       <p class="text-sm">
         Impressões de alta qualidade, design profissional e soluções personalizadas para sua marca.
       </p>

@@ -89,7 +89,7 @@ function Home_tem() {
                   className="flex-shrink-0 p-4"
                   style={{ width: `${cardWidth}px` }}
                 >
-                  <div className="bg-white rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-20">
+                  <div className="bg-white  rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-20">
                     
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                     {card.imagem && (
@@ -106,11 +106,11 @@ function Home_tem() {
           </div>
         </div>
       </div>
-      <div className='bg-gradient-to-t from-blue-700 to-blue-600 '>
-        <div className='flex flex-auto bg-gradient-to-t from-blue-700 to-blue-600 '>
-              <img src={grafico} className='flex m-5'/>
-              <div className='m-5 my-20'>
-              <h1 className=' text-7xl font m-5 text-amber-100 font-bold'> Nossos Serviços</h1>
+      <div className='bg-gradient-to-t from-blue-700 to-blue-600  '>
+        <div className=' flex flex-auto bg-gradient-to-t from-blue-700 to-blue-600 '>
+              <div className='  overflow-hidden w-500 md:px-0'><img className='' src={grafico} /></div>
+              <div className=''>
+              <h1 className=' text-7xl font mb-12 text-center text-amber-100 font-bold'> Nossos Serviços</h1>
               <div>
               <p className='font text-amber-100 text-2xl'>Se você procura qualidade e confiança para seus materiais gráficos,
                  está no lugar certo. Aqui, cuidamos de cada detalhe para que seu projeto ganhe vida 
@@ -120,7 +120,7 @@ function Home_tem() {
               </div>
               </div>
         </div>
-        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-24">
+        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-44">
   <h2 className="text-center text-5xl text-amber-100 font-bold mb-12">Soluções Gráficas para Cada Necessidade</h2>
   <div className="flex flex-col md:flex-row justify-center items-center  gap-20 px-6 md:px-0">
 
@@ -144,15 +144,15 @@ function Home_tem() {
     </div>
 
   </div>
- <section className=" bg-gradient-to-t from-blue-900 to-blue-800 py-16 px-4 sm:px-10 lg:px-20">
-      <h2 className="text-4xl font-bold text-amber-100 text-center mb-10">
+ <section className="py-30 px-4 sm:px-10 lg:px-20 ">
+      <h2 className="text-6xl font-bold text-amber-100 text-center  mb-10">
         Onde Estamos Localizados
       </h2>
-
-      <div className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-xl">
+    <div className='flex gap-40'>
+      <div className="w-[400px]  flex bg-gradient-to-t from-blue-950 to-blue-800 h-[550px] rounded-2xl overflow-hidden ">
         <iframe 
           title="Localização da Gráfica"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.963981841546!2d-38.52673918573633!3d-3.730489644304561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74859a8d9a2d3%3A0x8c5b25d3e2f4c6c3!2sFortaleza%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1680999820432!5m2!1spt-BR!2sbr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1410339959516!2d-37.952952139672874!3d-6.111707061257199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bad5fdd408115b%3A0xa8a17f5ef05a26a6!2sGr%C3%A1fica%20Stilus!5e0!3m2!1spt-BR!2sbr!4v1752165717435!5m2!1spt-BR!2sbr" 
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -160,7 +160,12 @@ function Home_tem() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+        
       </div>
+      <div>
+          <h1 className='text-5xl font font-bold text-amber-100 m-10'>Venha nos visitar </h1>
+        </div>
+        </div>
     </section>
 
 </section>
