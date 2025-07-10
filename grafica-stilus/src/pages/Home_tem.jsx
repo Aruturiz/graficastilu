@@ -150,7 +150,7 @@ function Home_tem() {
       </h2>
 
       <div className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-xl">
-        <iframe
+        <iframe 
           title="Localização da Gráfica"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.963981841546!2d-38.52673918573633!3d-3.730489644304561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74859a8d9a2d3%3A0x8c5b25d3e2f4c6c3!2sFortaleza%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1680999820432!5m2!1spt-BR!2sbr"
           width="100%"
