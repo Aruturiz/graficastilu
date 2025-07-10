@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
-import degrade from '../assets/Imagens/home/degrade.png';
 import grafico from '../assets/Imagens/home/grafico.png';
 import you from '../assets/Imagens/home/you.png';
-import Footer from './footer';
+import Footer from './Footer';
+import foto from '../assets/Imagens/home/foto.png';
+import maquina2 from '../assets/Imagens/home/maquina2.png';
+import maquina3 from '../assets/Imagens/home/maquina3.png';
 
 function Home_tem() {
   const cards = [
@@ -46,12 +48,8 @@ function Home_tem() {
       <NavBar />
 
       {/* Seção principal */}
-      <div className="relative min-h-screen p-10 flex items-start justify-start">
-        <img
-          src={degrade}
-          alt=""
-          className="absolute top-0 left-0 w-full h-full bg-cover -z-20"
-        />
+      <div className=" bg-gradient-to-t from-blue-500 to-blue-800 relative min-h-screen p-10 flex items-start justify-start">
+        
 
         <img src={foto1} alt="foto_da_frente" className="ml-10 w-[400px] h-auto rounded-xl" />
 
@@ -70,7 +68,7 @@ function Home_tem() {
       </div>
 
       {/* Carrossel animado com loop */}
-      <div className="bg-blue-600 py-15">
+      <div className="bg-gradient-to-t from-blue-600 to-blue-500 py-15">
         <div className=" rounded-3xl py-5  mr-80 ml-80 -my-20">
           <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 m-5">OFERTAS</h1>
       </div>
@@ -91,7 +89,7 @@ function Home_tem() {
                   className="flex-shrink-0 p-4"
                   style={{ width: `${cardWidth}px` }}
                 >
-                  <div className="bg-white rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-30">
+                  <div className="bg-white rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-20">
                     
                     <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                     {card.imagem && (
@@ -99,7 +97,7 @@ function Home_tem() {
                     )}
                     <p className="text-gray-700 text-center">{card.descricao}</p>
                     <button className="rosa w-25 h-10 rounded-4xl my-10 hover:scale-x-120 ">
-                      <h1 className='text-amber-100 text-1xl font'>Pedir</h1>
+                      <a href='https://wa.me/558498649725'><h1 className='text-amber-100 text-1xl font'>Pedir</h1></a>
                     </button>
                   </div>
                 </div>
@@ -108,8 +106,8 @@ function Home_tem() {
           </div>
         </div>
       </div>
-      <div className='bg-blue-700 h-'>
-        <div className='flex flex-auto '>
+      <div className='bg-gradient-to-t from-blue-700 to-blue-600 '>
+        <div className='flex flex-auto bg-gradient-to-t from-blue-700 to-blue-600 '>
               <img src={grafico} className='flex m-5'/>
               <div className='m-5 my-20'>
               <h1 className=' text-7xl font m-5 text-amber-100 font-bold'> Nossos Serviços</h1>
@@ -122,6 +120,51 @@ function Home_tem() {
               </div>
               </div>
         </div>
+        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-24">
+  <h2 className="text-center text-5xl text-amber-100 font-bold mb-12">Soluções Gráficas para Cada Necessidade</h2>
+  <div className="flex flex-col md:flex-row justify-center items-center  gap-20 px-6 md:px-0">
+
+    {/* CARD 1 - Impressoras Offset */}
+    <div className=" rounded-3xl overflow-hidden w-[300px]  shadow-lg">
+      
+        <img src={foto}  className='hover:size-auto'/>
+        
+      
+    </div>
+
+    {/* CARD 2 - Máquinas de Corte */}
+    <div className=" rounded-3xl overflow-hidden w-[300px] shadow-lg">
+      <img src={maquina2}/>
+    </div>
+
+    {/* CARD 3 - Acabamento e Laminação */}
+    <div className=" rounded-3xl overflow-hidden w-[300px]  shadow-lg">
+      
+      <img src={maquina3}/>
+    </div>
+
+  </div>
+ <section className=" bg-gradient-to-t from-blue-900 to-blue-800 py-16 px-4 sm:px-10 lg:px-20">
+      <h2 className="text-4xl font-bold text-amber-100 text-center mb-10">
+        Onde Estamos Localizados
+      </h2>
+
+      <div className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-xl">
+        <iframe
+          title="Localização da Gráfica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.963981841546!2d-38.52673918573633!3d-3.730489644304561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74859a8d9a2d3%3A0x8c5b25d3e2f4c6c3!2sFortaleza%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1680999820432!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+</section>
+
       </div>
       <Footer />
     </div>

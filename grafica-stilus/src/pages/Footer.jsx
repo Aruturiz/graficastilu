@@ -26,18 +26,18 @@ return (
     <div className="m-5">
       <h4 class="text-lg font-semibold mb-3">Contato</h4>
       <ul class="text-sm space-y-1">
-        <li>📞 (84) 99999-9999</li>
-        <li>📧 contato@graficacriativa.com</li>
-        <li>📍 Rua Fracisco Vitor, 165 – Serrinha dos Pintos</li>
+        <a href="https://wa.me/558498649725"><li>📞 (84) 99864-9725</li></a>
+        <li>📧 ... </li>
+        <li>📍 Rua Fracisco Vitor, 165 – Serrinha dos Pintos/RN</li>
       </ul>
     </div>
 
     <div className="m-5">
       <h4 class="text-lg font-semibold mb-3">Siga-nos</h4>
       <div class="flex space-x-4">
-        <a href="#" class="hover:text-blue-400">Facebook</a>
+        
         <a href="https://www.instagram.com/graficastilusrn/" class="hover:text-pink-400">Instagram</a>
-        <a href="#" class="hover:text-emerald-400">WhatsApp</a>
+        <a href="https://wa.me/558498649725" class="hover:text-emerald-400">WhatsApp</a>
       </div>
     </div>
   </div>

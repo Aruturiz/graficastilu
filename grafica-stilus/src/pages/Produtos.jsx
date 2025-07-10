@@ -1,5 +1,5 @@
 import NavBar from './NavBar';
-import Footer from './footer';
+import Footer from './Footer';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
 
 
