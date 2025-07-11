@@ -17,13 +17,13 @@ function Produtos() {
       <NavBar />
 
       {/* Cabeçalho da Página */}
-      <div className="relative min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-br to-blue-700 from-blue-900 text-amber-100 p-5">
+      <div className="relative min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-t to-blue-800 from-blue-700 text-amber-100 p-5">
         <h1 className="text-5xl font-bold mb-4">Nossos Produtos</h1>
         
       </div>
 
       {/* Lista de Produtos */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-blue-500">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-gradient-to-t to-blue-700 from-blue-500">
         {produtos.map((produto, index) => (
           <div key={index} className="bg-white rounded-2xl shadow-lg flex flex-col items-center p-6 hover:scale-105 transition-transform">
             <h2 className="text-2xl font-bold text-blue-700 mb-4">{produto.titulo}</h2>

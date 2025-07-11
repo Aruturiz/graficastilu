@@ -48,7 +48,7 @@ function Home_tem() {
       <NavBar />
 
       {/* Seção principal */}
-      <div className=" bg-gradient-to-t from-blue-500 to-blue-800 relative min-h-screen p-10 flex items-start justify-start">
+      <div className="  bg-gradient-to-t from-blue-500 to-blue-800 relative min-h-screen p-10 flex items-start justify-start">
         
 
         <img src={foto1} alt="foto_da_frente" className="ml-10 w-[400px] h-auto rounded-xl" />
@@ -63,7 +63,11 @@ function Home_tem() {
             Com tecnologia de ponta e uma equipe especializada, entregamos qualidade,
             agilidade e excelência em cada impressão. Seja qual for o tamanho do seu projeto,
             estamos prontos para fazer acontecer!
-          </p>
+            </p>
+          <button className="bg-blue-400 w-70 h-12 rounded-4xl my-10 hover:border-amber-100 ">
+                      <a href='https://wa.me/558498649725'><h1 className='text-amber-100 font-bold text-2xl font'>Fale conosco</h1></a>
+                    </button>
+          
         </div>
       </div>
 
@@ -71,6 +75,7 @@ function Home_tem() {
       <div className="bg-gradient-to-t from-blue-600 to-blue-500 py-15">
         <div className=" rounded-3xl py-5  mr-80 ml-80 -my-20">
           <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 m-5">OFERTAS</h1>
+
       </div>
 
 
@@ -120,12 +125,12 @@ function Home_tem() {
               </div>
               </div>
         </div>
-        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-44">
-  <h2 className="text-center text-5xl text-amber-100 font-bold mb-12">Soluções Gráficas para Cada Necessidade</h2>
+        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-24">
+  <h2 className="text-center text-5xl text-amber-100 font-bold p-10 mb-12">Soluções Gráficas para Cada Necessidade</h2>
   <div className="flex flex-col md:flex-row justify-center items-center  gap-20 px-6 md:px-0">
 
     {/* CARD 1 - Impressoras Offset */}
-    <div className=" rounded-3xl overflow-hidden w-[300px]  shadow-lg">
+    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
       
         <img src={foto}  className='hover:size-auto'/>
         
@@ -133,23 +138,23 @@ function Home_tem() {
     </div>
 
     {/* CARD 2 - Máquinas de Corte */}
-    <div className=" rounded-3xl overflow-hidden w-[300px] shadow-lg">
+    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
       <img src={maquina2}/>
     </div>
 
     {/* CARD 3 - Acabamento e Laminação */}
-    <div className=" rounded-3xl overflow-hidden w-[300px]  shadow-lg">
+    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
       
       <img src={maquina3}/>
     </div>
 
   </div>
- <section className="py-30 px-4 sm:px-10 lg:px-20 ">
-      <h2 className="text-6xl font-bold text-amber-100 text-center  mb-10">
+ <section className="py-10 px-4 gap-6 sm:px-10 lg:px-20 ">
+      <h2 className="text-6xl font-bold text-amber-100 text-center  p-10 mb-10">
         Onde Estamos Localizados
       </h2>
     <div className='flex gap-40'>
-      <div className="w-[400px]  flex bg-gradient-to-t from-blue-950 to-blue-800 h-[550px] rounded-2xl overflow-hidden ">
+      <div className="w-[400px]  flex bg-gradient-to-t from-blue-950 to-blue-800 h-[560px] rounded-2xl overflow-hidden ">
         <iframe 
           title="Localização da Gráfica"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1410339959516!2d-37.952952139672874!3d-6.111707061257199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bad5fdd408115b%3A0xa8a17f5ef05a26a6!2sGr%C3%A1fica%20Stilus!5e0!3m2!1spt-BR!2sbr!4v1752165717435!5m2!1spt-BR!2sbr" 
@@ -163,7 +168,50 @@ function Home_tem() {
         
       </div>
       <div>
-          <h1 className='text-5xl font font-bold text-amber-100 m-10'>Venha nos visitar </h1>
+          
+          <div class="flex flex-col gap-6 p-13 bg-white rounded-xl shadow-lg max-w-sm">
+            
+  <div class="flex items-center gap-3 hover:bg-cyan-200 border-l-4 border-blue-600 pl-3">
+    <span class="text-2xl">🖨️</span>
+    <div>
+      <h3 class="font-bold text-lg text-blue-800">Impressão Digital</h3>
+      <p class="text-sm text-gray-600">Alta qualidade e rapidez para suas demandas.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3 border-l-4 hover:bg-pink-200 border-pink-500 pl-3">
+    <span class="text-2xl">🎉</span>
+    <div>
+      <h3 class="font-bold text-lg text-pink-700">Convites Personalizados</h3>
+      <p class="text-sm text-gray-600">Criações únicas para momentos especiais.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3 border-l-4 hover:bg-green-200 border-green-500 pl-3">
+    <span class="text-2xl">📚</span>
+    <div>
+      <h3 class="font-bold text-lg text-green-700">Encadernações</h3>
+      <p class="text-sm text-gray-600">Organize seus documentos com estilo.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3 border-l-4 hover:bg-yellow-200 border-yellow-500 pl-3">
+    <span class="text-2xl">📦</span>
+    <div>
+      <h3 class="font-bold text-lg text-yellow-600">Cartazes, Banners e Adesivos</h3>
+      <p class="text-sm text-gray-600">Materiais impactantes para divulgação.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3 border-l-4 hover:bg-purple-200 border-purple-500 pl-3">
+    <span class="text-2xl">💡</span>
+    <div>
+      <h3 class="font-bold text-lg text-purple-700">Arte Final e Design Gráfico</h3>
+      <p class="text-sm text-gray-600">Criações visuais profissionais para seu projeto.</p>
+    </div>
+  </div>
+</div>
+
         </div>
         </div>
     </section>
