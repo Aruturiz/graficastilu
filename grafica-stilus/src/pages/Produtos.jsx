@@ -29,9 +29,9 @@ function Produtos() {
             <h2 className="text-2xl font-bold text-blue-700 mb-4">{produto.titulo}</h2>
             <img src={produto.imagem} alt={produto.titulo} className="w-32 h-32 object-contain mb-4" />
             <p className="text-gray-700 text-center mb-6">{produto.descricao}</p>
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
+            <a href='https://wa.me/558498649725'><button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
               Pedir Orçamento
-            </button>
+            </button></a>
           </div>
         ))}
       </div>

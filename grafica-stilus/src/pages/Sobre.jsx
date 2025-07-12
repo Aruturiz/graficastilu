@@ -1,71 +1,81 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import grafico from '../assets/Imagens/home/grafico.png';
 import foto1 from '../assets/Imagens/home/foto1.jpg';
 
 function Sobre() {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
       <NavBar />
 
-      {/* Cabeçalho bonito */}
-      <div className="relative min-h-[60vh] flex flex-col justify-center items-center bg-gradient-to-t from-blue-700 to-blue-800 text-amber-100 p-10 overflow-hidden">
-        <h1 className="text-6xl font-bold mb-4">Quem Somos</h1>
-        <p className="text-2xl max-w-3xl text-center">
-          Paixão por transformar ideias em materiais de alta qualidade. Descubra o que torna a nossa gráfica única!
+      {/* Hero Section */}
+      <section className="text-center py-24 px-6 bg-gradient-to-b from-blue-900 to-blue-700 relative overflow-hidden">
+        <h1 className="text-6xl font-extrabold text-amber-300 drop-shadow-md mb-6">Quem Somos</h1>
+        <p className="text-xl max-w-3xl mx-auto text-blue-100 leading-relaxed">
+          Transformamos ideias em materiais gráficos de alto impacto, com paixão, tecnologia e criatividade.
         </p>
-        <img src={grafico} alt="Gráfico Decorativo" className="absolute right-10 bottom-0 w-52 opacity-20 hidden md:block" />
-      </div>
-    
+      </section>
 
-      {/* Seção 1 - História */}
-      <div className="flex flex-col bg-gradient-to-t from-blue-500 to-blue-700 md:flex-row items-center gap-10 p-10 bg-white">
-        <img src={foto1} alt="Gráfica" className="w-full md:w-1/2 rounded-2xl shadow-lg" />
-        <div className="max-w-xl">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Nossa História</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Desde o nosso início, temos como missão oferecer materiais gráficos que unem qualidade, criatividade e agilidade.
-            Ao longo dos anos, nos consolidamos como referência em impressões personalizadas, sempre buscando inovação e tecnologia.
+      {/* História */}
+      <section className="grid md:grid-cols-2 gap-10 px-10 py-20 items-center">
+        <img
+          src={foto1}
+          alt="Gráfica"
+          className="rounded-2xl shadow-2xl w-full object-cover"
+        />
+        <div>
+          <h2 className="text-4xl font-bold text-amber-300 mb-4">Nossa História</h2>
+          <p className="text-blue-100 text-lg leading-relaxed">
+            Desde a fundação, nossa missão é entregar materiais gráficos com excelência, criatividade e agilidade. 
+            Evoluímos com a tecnologia e nos consolidamos como referência em soluções gráficas personalizadas.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Seção 2 - Missão, Visão e Valores */}
-      <div className="bg-gradient-to-t from-blue-700 to-blue-500 py-16 px-10 flex flex-col items-center">
-        <h2 className="text-4xl font-bold text-blue-700 mb-10">Nossos Pilares</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full">
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">Missão</h3>
-            <p className="text-gray-700">
-              Oferecer soluções gráficas de alta qualidade que superem as expectativas dos nossos clientes.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">Visão</h3>
-            <p className="text-gray-700">
-              Ser reconhecida como a gráfica mais confiável e inovadora da região.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">Valores</h3>
-            <p className="text-gray-700">
-              Comprometimento, ética, excelência no atendimento e foco em resultados.
-            </p>
-          </div>
+      {/* Missão, Visão e Valores */}
+      <section className="py-20 px-10 bg-white/10 backdrop-blur-xl border-y border-white/10">
+        <h2 className="text-4xl font-bold text-center text-amber-300 mb-14">Nossos Pilares</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {[
+            {
+              titulo: 'Missão',
+              texto: 'Oferecer soluções gráficas que encantem e superem expectativas.'
+            },
+            {
+              titulo: 'Visão',
+              texto: 'Ser referência em inovação e confiança no setor gráfico regional.'
+            },
+            {
+              titulo: 'Valores',
+              texto: 'Excelência, ética, criatividade e foco total no cliente.'
+            }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 p-6 rounded-2xl border border-white/20 shadow-xl hover:scale-105 transition-transform text-center"
+            >
+              <h3 className="text-2xl font-bold text-amber-300 mb-4">{item.titulo}</h3>
+              <p className="text-blue-100">{item.texto}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
 
-      {/* Seção 3 - Equipe */}
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10 p-10 bg-gradient-to-t from-blue-900 to-blue-700">
-        <img src={foto1} alt="Equipe" className="w-full md:w-1/2 rounded-2xl shadow-lg" />
-        <div className="max-w-xl">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Nossa Equipe</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Contamos com profissionais apaixonados pelo que fazem, preparados para transformar suas ideias em realidade. Cada detalhe importa para nós!
+      {/* Equipe */}
+      <section className="grid md:grid-cols-2 gap-10 px-10 py-20 items-center">
+        <img
+          src={foto1}
+          alt="Equipe"
+          className="rounded-2xl shadow-2xl w-full object-cover"
+        />
+        <div>
+          <h2 className="text-4xl font-bold text-amber-300 mb-4">Nossa Equipe</h2>
+          <p className="text-blue-100 text-lg leading-relaxed">
+            Nossa equipe é formada por profissionais criativos e comprometidos. Cada projeto é tratado com atenção aos detalhes, 
+            buscando sempre transformar ideias em impressões marcantes.
           </p>
         </div>
-      </div>
-      
+      </section>
+
       <Footer />
     </div>
   );
