@@ -9,7 +9,7 @@ function Contato() {
 
       {/* Título com destaque */}
       <header className="text-center py-20 px-6">
-        <h1 className="text-5xl font-extrabold text-amber-300 drop-shadow-lg mb-4">
+        <h1 className="text-5xl font-extrabold text-amber-100 drop-shadow-lg mb-4">
           Vamos conversar?
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-blue-100">
@@ -22,29 +22,29 @@ function Contato() {
 
         {/* Card de Contato */}
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-xl transition-all duration-300">
-          <h2 className="text-2xl font-bold text-amber-300 mb-6">Fale conosco</h2>
+          <h2 className="text-2xl font-bold text-amber-100 mb-6">Fale conosco</h2>
           <ul className="space-y-4 text-blue-100">
             <li className="flex items-center gap-3">
-              <Phone className="text-amber-400" size={20} />
+              <Phone className="text-amber-100" size={20} />
               (84) 9 9999-9999
             </li>
             <li className="flex items-center gap-3">
-              <Mail className="text-amber-400" size={20} />
+              <Mail className="text-amber-100" size={20} />
               contato@primordial.com
             </li>
             <li className="flex items-center gap-3">
-              <MapPin className="text-amber-400" size={20} />
-              Rua Projetada, 123 - Portalegre/RN
+              <MapPin className="text-amber-100" size={20} />
+              Avenida Francisco Vitor, 165 - Serrinha dos Pintos/RN
             </li>
           </ul>
           <div className="mt-8 text-sm text-blue-200">
-            Atendimento de segunda a sexta, das 8h às 18h.
+            Atendimento de segunda a sexta, das 7:30h às 17h.
           </div>
         </div>
 
         {/* Formulário */}
         <form className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-xl space-y-6 text-gray-100">
-          <h2 className="text-2xl font-bold text-amber-300">Envie uma mensagem</h2>
+          <h2 className="text-2xl font-bold text-amber-100">Envie uma mensagem</h2>
 
           <div>
             <label className="block mb-1 text-sm text-blue-100">Seu nome</label>
@@ -78,7 +78,7 @@ function Contato() {
 
           <button
             type="submit"
-            className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-bold py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-amber-100 hover:bg-amber-500 text-blue-900 font-bold py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
           >
             <Send size={18} /> Enviar
           </button>

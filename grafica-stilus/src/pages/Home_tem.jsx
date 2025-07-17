@@ -55,7 +55,7 @@ function Home_tem() {
 
         <div className="ml-10 max-w-3xl">
           <h1 className="font-medium text-amber-100 text-6xl text-left">
-            A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos
+            A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos e decoração
           </h1>
 
           <p className="text-amber-100 mt-10 leading-relaxed text-2xl">
