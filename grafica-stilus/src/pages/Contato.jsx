@@ -13,7 +13,8 @@ function Contato() {
           Vamos conversar?
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-blue-100">
-          Preencha o formulário ou use os canais abaixo. A Primordial está pronta para impulsionar sua presença digital com excelência.
+          Preencha o formulário ou use os canais abaixo. A Gráfica Stilus está pronta para
+           impulsionar sua presença digital com excelência.
         </p>
       </header>
 
@@ -26,11 +27,11 @@ function Contato() {
           <ul className="space-y-4 text-blue-100">
             <li className="flex items-center gap-3">
               <Phone className="text-amber-100" size={20} />
-              (84) 9 9999-9999
+              (84) 9 98649725
             </li>
             <li className="flex items-center gap-3">
               <Mail className="text-amber-100" size={20} />
-              contato@primordial.com
+              ggraficastilus@gmail.com
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="text-amber-100" size={20} />

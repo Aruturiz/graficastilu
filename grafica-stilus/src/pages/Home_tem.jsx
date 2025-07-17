@@ -7,14 +7,19 @@ import Footer from './Footer';
 import foto from '../assets/Imagens/home/foto.png';
 import maquina2 from '../assets/Imagens/home/maquina2.png';
 import maquina3 from '../assets/Imagens/home/maquina3.png';
+import adesivo from '../assets/Imagens/home/adesivo.png';
+import brindes from '../assets/Imagens/home/brindes.png';
+import folder from '../assets/Imagens/home/folder.png';
+import baner from '../assets/Imagens/home/baner.png';
+import visita from '../assets/Imagens/home/visita.png';
 
 function Home_tem() {
   const cards = [
-    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem:you },
-    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.',imagem:you },
-    { titulo: 'Adesivos ', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',  imagem:you },
-    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.',imagem:you },
-    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.',imagem:you},
+    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem:baner },
+    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.',imagem:visita },
+    { titulo: 'Adesivos ', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',  imagem:adesivo },
+    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.',imagem:brindes },
+    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.',imagem:folder},
   ];
 
   const cardWidth = 320;
@@ -48,12 +53,12 @@ function Home_tem() {
       <NavBar />
 
       {/* Seção principal */}
-      <div className="  bg-gradient-to-t from-blue-500 to-blue-800 relative min-h-screen p-10 flex items-start justify-start">
+      <div className="  bg-gradient-to-t from-blue-500 to-blue-800 relative flex-col md:flex-row  p-10 flex  items-start justify-start">
         
 
         <img src={foto1} alt="foto_da_frente" className="ml-10 w-[400px] h-auto rounded-xl" />
 
-        <div className="ml-10 max-w-3xl">
+        <div className="ml-10  ">
           <h1 className="font-medium text-amber-100 text-6xl text-left">
             A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos e decoração
           </h1>
@@ -66,17 +71,17 @@ function Home_tem() {
             </p>
           <button className="bg-blue-400 w-70 h-12 rounded-4xl my-10 hover:border-amber-100 ">
                       <a href='https://wa.me/558498649725'><h1 className='text-amber-100 font-bold text-2xl font'>Fale conosco</h1></a>
-                    </button>
+                    </button>   
           
         </div>
       </div>
 
       {/* Carrossel animado com loop */}
       <div className="bg-gradient-to-t from-blue-600 to-blue-500 py-15">
-        <div className=" rounded-3xl py-5  mr-80 ml-80 -my-20">
-          <h1 className="text-center text-amber-100 text-5xl font-bold mb-10 m-5">OFERTAS</h1>
+        
+          <h1 className="text-center text-amber-100 text-5xl font-bold">OFERTAS</h1>
 
-      </div>
+      
 
 
           <div className="overflow-hidden w-full">
