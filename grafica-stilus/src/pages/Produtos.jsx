@@ -7,27 +7,27 @@ function Produtos() {
   {
     titulo: 'Banner Personalizado',
     descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.',
-    imagem: 'public/assets/imagens/home/baner.png',
+    imagem: '/assets/imagens/home/baner.png',
   },
   {
     titulo: 'Cartões de Visita',
     descricao: 'Impressione seus clientes com um cartão de visita profissional.',
-    imagem: 'public/assets/imagens/home/visita.png',
+    imagem: '/assets/imagens/home/visita.png',
   },
   {
     titulo: 'Adesivos',
     descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',
-    imagem: 'public/assets/imagens/home/adesivo.png',
+    imagem: '/assets/imagens/home/adesivo.png',
   },
   {
     titulo: 'Brindes Corporativos',
     descricao: 'Crie conexão com seus clientes com brindes personalizados.',
-    imagem: 'public/assets/imagens/home/brindes.png',
+    imagem: '/assets/imagens/home/brindes.png',
   },
   {
     titulo: 'Folders & Panfletos',
     descricao: 'Material promocional impactante para divulgação de serviços.',
-    imagem: 'public/assets/imagens/home/folder.png',
+    imagem: '/assets/imagens/home/folder.png',
   },
 ];
 
