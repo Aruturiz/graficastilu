@@ -8,7 +8,7 @@ function NavBar(){
         
         
         <div className="flex-shrink-0">
-         <Link to="/home"> <img src={logo} alt="Logo" className=" w-20 h-20 rounded-full ml-15" /></Link>
+         <Link to="/home"> <img src="/assets/imagens/logo.png" alt="Logo" className=" w-20 h-20 rounded-full ml-15" /></Link>
         </div>
         
         
