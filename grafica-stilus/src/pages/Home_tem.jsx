@@ -7,19 +7,34 @@ import Footer from './Footer';
 import foto from '../assets/imagens/home/foto.png';
 import maquina2 from '../assets/imagens/home/maquina2.png';
 import maquina3 from '../assets/imagens/home/maquina3.png';
-import adesivo from '../assets/imagens/home/adesivo.png';
-import brindes from '../assets/imagens/home/brindes.png';
-import folder from '../assets/imagens/home/folder.png';
-import baner from '../assets/imagens/home/baner.png';
-import visita from '../assets/imagens/home/visita.png';
 
 function Home_tem() {
   const cards = [
-    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem:baner },
-    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.',imagem:visita },
-    { titulo: 'Adesivos ', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',  imagem:adesivo },
-    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.',imagem:brindes },
-    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.',imagem:folder},
+    {
+      titulo: 'Banner Personalizado',
+      descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.',
+      imagem: '/assets/imagens/home/baner.png',
+    },
+    {
+      titulo: 'Cartões de Visita',
+      descricao: 'Impressione seus clientes com um cartão de visita profissional.',
+      imagem: '/assets/imagens/home/visita.png',
+    },
+    {
+      titulo: 'Adesivos',
+      descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',
+      imagem: '/assets/imagens/home/adesivo.png',
+    },
+    {
+      titulo: 'Brindes Corporativos',
+      descricao: 'Crie conexão com seus clientes com brindes personalizados.',
+      imagem: '/assets/imagens/home/brindes.png',
+    },
+    {
+      titulo: 'Folders & Panfletos',
+      descricao: 'Material promocional impactante para divulgação de serviços.',
+      imagem: '/assets/imagens/home/folder.png',
+    },
   ];
 
   const cardWidth = 320;
@@ -132,28 +147,38 @@ function Home_tem() {
         </div>
         <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-24">
   <h2 className="text-center text-5xl text-amber-100 font-bold p-10 mb-12">Soluções Gráficas para Cada Necessidade</h2>
-  <div className="flex flex-col md:flex-row justify-center items-center  gap-20 px-6 md:px-0">
 
-    {/* CARD 1 - Impressoras Offset */}
-    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
-      
-        <img src={foto}  className='hover:size-auto'/>
-        
-      
+<div className="flex flex-wrap justify-center gap-6 my-8">
+
+  {/* CARD 1 - Impressoras Offset */}
+  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
+    <img src={foto} alt="Impressoras Offset" className="w-full h-auto object-cover" />
+    <div className="p-4 bg-white">
+      <h3 className="text-xl font-semibold mb-2">Impressoras Offset</h3>
+      <p className="text-gray-600">Tecnologia de impressão de alta qualidade para grandes volumes.</p>
     </div>
-
-    {/* CARD 2 - Máquinas de Corte */}
-    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
-      <img src={maquina2}/>
-    </div>
-
-    {/* CARD 3 - Acabamento e Laminação */}
-    <div className=" rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg">
-      
-      <img src={maquina3}/>
-    </div>
-
   </div>
+
+  {/* CARD 2 - Máquinas de Corte */}
+  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
+    <img src={maquina2} alt="Máquinas de Corte" className="w-full h-auto object-cover" />
+    <div className="p-4 bg-white">
+      <h3 className="text-xl font-semibold mb-2">Máquinas de Corte</h3>
+      <p className="text-gray-600">Corte preciso e rápido para todos os tipos de materiais gráficos.</p>
+    </div>
+  </div>
+
+  {/* CARD 3 - Acabamento e Laminação */}
+  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
+    <img src={maquina3} alt="Acabamento e Laminação" className="w-full h-auto object-cover" />
+    <div className="p-4 bg-white">
+      <h3 className="text-xl font-semibold mb-2">Acabamento e Laminação</h3>
+      <p className="text-gray-600">Detalhes finais com sofisticação e proteção para seus materiais.</p>
+    </div>
+  </div>
+
+</div>
+
  <section className="py-10 px-4 gap-6 sm:px-10 lg:px-20 ">
       <h2 className="text-6xl font-bold text-amber-100 text-center  p-10 mb-10">
         Onde Estamos Localizados
