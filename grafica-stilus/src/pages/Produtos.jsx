@@ -1,6 +1,5 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import foto1 from '../assets/Imagens/home/foto1.jpg';
 import adesivo from '../assets/Imagens/home/adesivo.png';
 import brindes from '../assets/Imagens/home/brindes.png';
 import folder from '../assets/Imagens/home/folder.png';
