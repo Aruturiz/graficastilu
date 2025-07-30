@@ -1,6 +1,6 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import foto1 from '../assets/imagens/home/foto1.jpg';
+import foto1 from 'public/assets/imagens/home/foto1.jpg';
 
 function Sobre() {
   return (
