@@ -1,40 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
+
 import foto1 from '../assets/imagens/home/foto1.jpg';
 import grafico from '../assets/imagens/home/grafico.png';
-import you from '../assets/imagens/home/you.png';
-import Footer from './Footer';
 import foto from '../assets/imagens/home/foto.png';
 import maquina2 from '../assets/imagens/home/maquina2.png';
 import maquina3 from '../assets/imagens/home/maquina3.png';
+import baner from '../assets/imagens/home/baner.png';
+import visita from '../assets/imagens/home/visita.png';
+import adesivo from '../assets/imagens/home/adesivo.png';
+import brindes from '../assets/imagens/home/brindes.png';
+import folder from '../assets/imagens/home/folder.png';
 
 function Home_tem() {
   const cards = [
-    {
-      titulo: 'Banner Personalizado',
-      descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.',
-      imagem: '/assets/imagens/home/baner.png',
-    },
-    {
-      titulo: 'Cartões de Visita',
-      descricao: 'Impressione seus clientes com um cartão de visita profissional.',
-      imagem: '/assets/imagens/home/visita.png',
-    },
-    {
-      titulo: 'Adesivos',
-      descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',
-      imagem: '/assets/imagens/home/adesivo.png',
-    },
-    {
-      titulo: 'Brindes Corporativos',
-      descricao: 'Crie conexão com seus clientes com brindes personalizados.',
-      imagem: '/assets/imagens/home/brindes.png',
-    },
-    {
-      titulo: 'Folders & Panfletos',
-      descricao: 'Material promocional impactante para divulgação de serviços.',
-      imagem: '/assets/imagens/home/folder.png',
-    },
+    { titulo: 'Banner Personalizado', descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.', imagem: baner },
+    { titulo: 'Cartões de Visita', descricao: 'Impressione seus clientes com um cartão de visita profissional.', imagem: visita },
+    { titulo: 'Adesivos', descricao: 'Divulgue sua marca com adesivos criativos e duráveis.', imagem: adesivo },
+    { titulo: 'Brindes Corporativos', descricao: 'Crie conexão com seus clientes com brindes personalizados.', imagem: brindes },
+    { titulo: 'Folders & Panfletos', descricao: 'Material promocional impactante para divulgação de serviços.', imagem: folder },
   ];
 
   const cardWidth = 320;
@@ -42,24 +27,22 @@ function Home_tem() {
   const [isTransitioning, setIsTransitioning] = useState(true);
   const listRef = useRef();
 
-  const fullList = [...cards, ...cards]; // Duplica os cards para loop contínuo
+  const fullList = [...cards, ...cards];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setIsTransitioning(true);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // Reseta para início sem transição após chegar na metade (início da duplicata)
   useEffect(() => {
     if (currentIndex === cards.length) {
       setTimeout(() => {
-        setIsTransitioning(false); // Desativa transição
-        setCurrentIndex(0);        // Reseta para o índice 0
-      }, 1000); // Aguarda fim da animação
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+      }, 1000);
     }
   }, [currentIndex, cards.length]);
 
@@ -67,188 +50,163 @@ function Home_tem() {
     <div>
       <NavBar />
 
-      {/* Seção principal */}
-      <div className="  bg-gradient-to-t from-blue-500 to-blue-800 relative flex-col md:flex-row  p-10 flex  items-start justify-start">
-        
-
-        <img src={foto1} alt="foto_da_frente" className="ml-10 w-[400px] h-auto rounded-xl" />
-
-        <div className="ml-10  ">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-t from-blue-500 to-blue-800 flex flex-col md:flex-row items-start justify-start p-10">
+        <img src={foto1} alt="Foto de destaque" className="ml-10 w-[400px] h-auto rounded-xl" />
+        <div className="ml-10">
           <h1 className="font-medium text-amber-100 text-6xl text-left">
             A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos e decoração
           </h1>
-
           <p className="text-amber-100 mt-10 leading-relaxed text-2xl">
             Somos apaixonados por transformar ideias em materiais que impressionam.
             Com tecnologia de ponta e uma equipe especializada, entregamos qualidade,
             agilidade e excelência em cada impressão. Seja qual for o tamanho do seu projeto,
             estamos prontos para fazer acontecer!
-            </p>
-          <button className="bg-blue-400 w-70 h-12 rounded-4xl my-10 hover:border-amber-100 ">
-                      <a href='https://wa.me/558498649725'><h1 className='text-amber-100 font-bold text-2xl font'>Fale conosco</h1></a>
-                    </button>   
-          
+          </p>
+          <a href="https://wa.me/558498649725">
+            <button className="bg-blue-400 w-70 h-12 rounded-3xl my-10 hover:border-amber-100 px-6">
+              <span className="text-amber-100 font-bold text-2xl">Fale conosco</span>
+            </button>
+          </a>
         </div>
       </div>
 
-      {/* Carrossel animado com loop */}
+      {/* Carrossel de Ofertas */}
       <div className="bg-gradient-to-t from-blue-600 to-blue-500 py-15">
-        
-          <h1 className="text-center text-amber-100 text-5xl font-bold">OFERTAS</h1>
-
-      
-
-
-          <div className="overflow-hidden w-full">
-            <div
-              ref={listRef}
-              className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
-              style={{
-                transform: `translateX(-${currentIndex * cardWidth}px)`,
-                width: `${fullList.length * cardWidth}px`,
-              }}
-            >
-              {fullList.map((card, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 p-4"
-                  style={{ width: `${cardWidth}px` }}
-                >
-                  <div className="bg-white  rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-20">
-                    
-                    <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
-                    {card.imagem && (
+        <h1 className="text-center text-amber-100 text-5xl font-bold">OFERTAS</h1>
+        <div className="overflow-hidden w-full">
+          <div
+            ref={listRef}
+            className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
+            style={{
+              transform: `translateX(-${currentIndex * cardWidth}px)`,
+              width: `${fullList.length * cardWidth}px`,
+            }}
+          >
+            {fullList.map((card, index) => (
+              <div key={index} className="flex-shrink-0 p-4" style={{ width: `${cardWidth}px` }}>
+                <div className="bg-white rounded-xl shadow-lg p-5 h-84 w-full flex flex-col items-center hover:scale-105 transition-transform duration-300 my-20">
+                  <h2 className="text-2xl font-bold text-blue-700 mb-4">{card.titulo}</h2>
                   <img src={card.imagem} alt={card.titulo} className="w-24 h-24 object-contain mb-2" />
-                    )}
-                    <p className="text-gray-700 text-center">{card.descricao}</p>
-                    <button className="rosa w-25 h-10 rounded-4xl my-10 hover:scale-x-120 ">
-                      <a href='https://wa.me/558498649725'><h1 className='text-amber-100 text-1xl font'>Pedir</h1></a>
+                  <p className="text-gray-700 text-center">{card.descricao}</p>
+                  <a href="https://wa.me/558498649725">
+                    <button className="rosa w-25 h-10 rounded-4xl my-10 hover:scale-x-110 px-4">
+                      <span className="text-amber-100 text-xl">Pedir</span>
                     </button>
-                  </div>
+                  </a>
                 </div>
-              ))}
-            
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <div className='bg-gradient-to-t from-blue-700 to-blue-600  '>
-        <div className=' flex flex-auto bg-gradient-to-t from-blue-700 to-blue-600 '>
-              <div className='  overflow-hidden w-500 md:px-0'><img className='' src={grafico} /></div>
-              <div className=''>
-              <h1 className=' text-7xl font mb-12 text-center text-amber-100 font-bold'> Nossos Serviços</h1>
-              <div>
-              <p className='font text-amber-100 text-2xl'>Se você procura qualidade e confiança para seus materiais gráficos,
-                 está no lugar certo. Aqui, cuidamos de cada detalhe para que seu projeto ganhe vida 
-                 com o acabamento e a apresentação que ele merece. Produzimos desde cartões de visita,
-                  panfletos, banners e adesivos, até convites especiais, folders e papelaria 
-                  personalizada.</p>
-              </div>
-              </div>
+
+      {/* Seção Serviços */}
+      <div className="bg-gradient-to-t from-blue-700 to-blue-600 py-24">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12">
+          <img src={grafico} alt="Gráfico" className="w-[500px] md:px-0" />
+          <div className="max-w-2xl">
+            <h1 className="text-7xl font-bold text-center text-amber-100 mb-12">Nossos Serviços</h1>
+            <p className="text-amber-100 text-2xl">
+              Se você procura qualidade e confiança para seus materiais gráficos,
+              está no lugar certo. Aqui, cuidamos de cada detalhe para que seu projeto
+              ganhe vida com o acabamento e a apresentação que ele merece. Produzimos
+              desde cartões de visita, panfletos, banners e adesivos, até convites especiais,
+              folders e papelaria personalizada.
+            </p>
+          </div>
         </div>
-        <section className="bg-gradient-to-t from-blue-800 to-blue-700 py-24">
-  <h2 className="text-center text-5xl text-amber-100 font-bold p-10 mb-12">Soluções Gráficas para Cada Necessidade</h2>
 
-<div className="flex flex-wrap justify-center gap-6 my-8">
-
-  {/* CARD 1 - Impressoras Offset */}
-  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
-    <img src={foto} alt="Impressoras Offset" className="w-full h-auto object-cover" />
-    <div className="p-4 bg-white">
-      <h3 className="text-xl font-semibold mb-2">Impressoras Offset</h3>
-      <p className="text-gray-600">Tecnologia de impressão de alta qualidade para grandes volumes.</p>
-    </div>
-  </div>
-
-  {/* CARD 2 - Máquinas de Corte */}
-  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
-    <img src={maquina2} alt="Máquinas de Corte" className="w-full h-auto object-cover" />
-    <div className="p-4 bg-white">
-      <h3 className="text-xl font-semibold mb-2">Máquinas de Corte</h3>
-      <p className="text-gray-600">Corte preciso e rápido para todos os tipos de materiais gráficos.</p>
-    </div>
-  </div>
-
-  {/* CARD 3 - Acabamento e Laminação */}
-  <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-105 transition-transform duration-300 shadow-lg">
-    <img src={maquina3} alt="Acabamento e Laminação" className="w-full h-auto object-cover" />
-    <div className="p-4 bg-white">
-      <h3 className="text-xl font-semibold mb-2">Acabamento e Laminação</h3>
-      <p className="text-gray-600">Detalhes finais com sofisticação e proteção para seus materiais.</p>
-    </div>
-  </div>
-
-</div>
-
- <section className="py-10 px-4 gap-6 sm:px-10 lg:px-20 ">
-      <h2 className="text-6xl font-bold text-amber-100 text-center  p-10 mb-10">
-        Onde Estamos Localizados
-      </h2>
-    <div className='flex gap-40'>
-      <div className="w-[400px]  flex bg-gradient-to-t from-blue-950 to-blue-800 h-[560px] rounded-2xl overflow-hidden ">
-        <iframe 
-          title="Localização da Gráfica"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1410339959516!2d-37.952952139672874!3d-6.111707061257199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bad5fdd408115b%3A0xa8a17f5ef05a26a6!2sGr%C3%A1fica%20Stilus!5e0!3m2!1spt-BR!2sbr!4v1752165717435!5m2!1spt-BR!2sbr" 
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-        
+        {/* Cards: Impressoras, Corte, Laminação */}
+        <div className="flex flex-wrap gap-6 justify-center mt-20">
+          <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg transition-transform duration-300">
+            <img src={foto} alt="Impressoras Offset" className="w-full h-auto object-cover" />
+          </div>
+          <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg transition-transform duration-300">
+            <img src={maquina2} alt="Máquinas de Corte" className="w-full h-auto object-cover" />
+          </div>
+          <div className="rounded-3xl overflow-hidden w-[300px] hover:scale-110 shadow-lg transition-transform duration-300">
+            <img src={maquina3} alt="Acabamento e Laminação" className="w-full h-auto object-cover" />
+          </div>
+        </div>
       </div>
-      <div>
-          
-          <div class="flex flex-col gap-6 p-13 bg-white rounded-xl shadow-lg max-w-sm">
-            
-  <div class="flex items-center gap-3 hover:bg-cyan-200 border-l-4 border-blue-600 pl-3">
-    <span class="text-2xl">🖨️</span>
-    <div>
-      <h3 class="font-bold text-lg text-blue-800">Impressão Digital</h3>
-      <p class="text-sm text-gray-600">Alta qualidade e rapidez para suas demandas.</p>
-    </div>
-  </div>
 
-  <div class="flex items-center gap-3 border-l-4 hover:bg-pink-200 border-pink-500 pl-3">
-    <span class="text-2xl">🎉</span>
-    <div>
-      <h3 class="font-bold text-lg text-pink-700">Convites Personalizados</h3>
-      <p class="text-sm text-gray-600">Criações únicas para momentos especiais.</p>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-3 border-l-4 hover:bg-green-200 border-green-500 pl-3">
-    <span class="text-2xl">📚</span>
-    <div>
-      <h3 class="font-bold text-lg text-green-700">Encadernações</h3>
-      <p class="text-sm text-gray-600">Organize seus documentos com estilo.</p>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-3 border-l-4 hover:bg-yellow-200 border-yellow-500 pl-3">
-    <span class="text-2xl">📦</span>
-    <div>
-      <h3 class="font-bold text-lg text-yellow-600">Cartazes, Banners e Adesivos</h3>
-      <p class="text-sm text-gray-600">Materiais impactantes para divulgação.</p>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-3 border-l-4 hover:bg-purple-200 border-purple-500 pl-3">
-    <span class="text-2xl">💡</span>
-    <div>
-      <h3 class="font-bold text-lg text-purple-700">Arte Final e Design Gráfico</h3>
-      <p class="text-sm text-gray-600">Criações visuais profissionais para seu projeto.</p>
-    </div>
-  </div>
-</div>
-
+      {/* Localização e Serviços Listados */}
+      <section className="py-10 px-4 gap-6 sm:px-10 lg:px-20 bg-gradient-to-t from-blue-800 to-blue-700">
+        <h2 className="text-6xl font-bold text-amber-100 text-center p-10 mb-10">
+          Onde Estamos Localizados
+        </h2>
+        <div className="flex flex-col lg:flex-row gap-10 justify-center items-center">
+          <div className="w-full max-w-md h-[560px] rounded-2xl overflow-hidden">
+            <iframe
+              title="Localização da Gráfica"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1410339959516!2d-37.952952139672874!3d-6.111707061257199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bad5fdd408115b%3A0xa8a17f5ef05a26a6!2sGr%C3%A1fica%20Stilus!5e0!3m2!1spt-BR!2sbr!4v1752165717435!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div className="flex flex-col gap-6 bg-white rounded-xl shadow-lg p-6 max-w-sm">
+            {[
+              {
+                emoji: '🖨️',
+                title: 'Impressão Digital',
+                desc: 'Alta qualidade e rapidez para suas demandas.',
+                color: 'blue-600',
+                hover: 'cyan-200',
+                textColor: 'text-blue-800',
+              },
+              {
+                emoji: '🎉',
+                title: 'Convites Personalizados',
+                desc: 'Criações únicas para momentos especiais.',
+                color: 'pink-500',
+                hover: 'pink-200',
+                textColor: 'text-pink-700',
+              },
+              {
+                emoji: '📚',
+                title: 'Encadernações',
+                desc: 'Organize seus documentos com estilo.',
+                color: 'green-500',
+                hover: 'green-200',
+                textColor: 'text-green-700',
+              },
+              {
+                emoji: '📦',
+                title: 'Cartazes, Banners e Adesivos',
+                desc: 'Materiais impactantes para divulgação.',
+                color: 'yellow-500',
+                hover: 'yellow-200',
+                textColor: 'text-yellow-600',
+              },
+              {
+                emoji: '💡',
+                title: 'Arte Final e Design Gráfico',
+                desc: 'Criações visuais profissionais para seu projeto.',
+                color: 'purple-500',
+                hover: 'purple-200',
+                textColor: 'text-purple-700',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`flex items-center gap-3 border-l-4 border-${item.color} hover:bg-${item.hover} pl-3 py-2`}
+              >
+                <span className="text-2xl">{item.emoji}</span>
+                <div>
+                  <h3 className={`font-bold text-lg ${item.textColor}`}>{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        </div>
-    </section>
+      </section>
 
-</section>
-
-      </div>
       <Footer />
     </div>
   );
