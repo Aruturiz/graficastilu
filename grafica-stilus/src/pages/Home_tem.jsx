@@ -2,16 +2,16 @@ import { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-import foto1 from 'assets/imagens/home/foto1.jpg';
-import grafico from 'assets/imagens/home/grafico.png';
-import foto from 'assets/imagens/home/foto.png';
-import maquina2 from 'assets/imagens/home/maquina2.png';
-import maquina3 from 'assets/imagens/home/maquina3.png';
-import baner from 'assets/imagens/home/baner.png';
-import visita from 'assets/imagens/home/visita.png';
-import adesivo from 'assets/imagens/home/adesivo.png';
-import brindes from 'assets/imagens/home/brindes.png';
-import folder from 'assets/imagens/home/folder.png';
+import foto1 from '../assets/imagens/home/foto1.jpg';
+import grafico from '../assets/imagens/home/grafico.png';
+import foto from '../assets/imagens/home/foto.png';
+import maquina2 from '../assets/imagens/home/maquina2.png';
+import maquina3 from '../assets/imagens/home/maquina3.png';
+import baner from '../assets/imagens/home/baner.png';
+import visita from '../assets/imagens/home/visita.png';
+import adesivo from '../assets/imagens/home/adesivo.png';
+import brindes from '../assets/imagens/home/brindes.png';
+import folder from '../assets/imagens/home/folder.png';
 
 function Home_tem() {
   const cards = [
