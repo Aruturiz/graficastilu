@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
-import foto1 from '../assets/Imagens/home/foto1.jpg';
-import grafico from '../assets/Imagens/home/grafico.png';
-import you from '../assets/Imagens/home/you.png';
+import foto1 from '../assets/imagens/home/foto1.jpg';
+import grafico from '../assets/imagens/home/grafico.png';
+import you from '../assets/imagens/home/you.png';
 import Footer from './Footer';
-import foto from '../assets/Imagens/home/foto.png';
-import maquina2 from '../assets/Imagens/home/maquina2.png';
-import maquina3 from '../assets/Imagens/home/maquina3.png';
-import adesivo from '../assets/Imagens/home/adesivo.png';
-import brindes from '../assets/Imagens/home/brindes.png';
-import folder from '../assets/Imagens/home/folder.png';
-import baner from '../assets/Imagens/home/baner.png';
-import visita from '../assets/Imagens/home/visita.png';
+import foto from '../assets/imagens/home/foto.png';
+import maquina2 from '../assets/imagens/home/maquina2.png';
+import maquina3 from '../assets/imagens/home/maquina3.png';
+import adesivo from '../assets/imagens/home/adesivo.png';
+import brindes from '../assets/imagens/home/brindes.png';
+import folder from '../assets/imagens/home/folder.png';
+import baner from '../assets/imagens/home/baner.png';
+import visita from '../assets/imagens/home/visita.png';
 
 function Home_tem() {
   const cards = [

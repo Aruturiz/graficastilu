@@ -1,10 +1,11 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import adesivo from '../assets/Imagens/home/adesivo.png';
-import brindes from '../assets/Imagens/home/brindes.png';
-import folder from '../assets/Imagens/home/folder.png';
-import baner from '../assets/Imagens/home/baner.png';
-import visita from '../assets/Imagens/home/visita.png';
+import foto1 from '../assets/imagens/home/foto1.jpg';
+import adesivo from '../assets/imagens/home/adesivo.png';
+import brindes from '../assets/imagens/home/brindes.png';
+import folder from '../assets/imagens/home/folder.png';
+import baner from '../assets/imagens/home/baner.png';
+import visita from '../assets/imagens/home/visita.png';
 
 
 function Produtos() {
