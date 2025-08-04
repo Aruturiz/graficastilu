@@ -1,5 +1,15 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
+import foto1 from '../assets/imagens/home/foto1.jpg';
+import grafico from '../assets/imagens/home/grafico.png';
+import foto from '../assets/imagens/home/foto.png';
+import maquina2 from '../assets/imagens/home/maquina2.png';
+import maquina3 from '../assets/imagens/home/maquina3.png';
+import baner from '../assets/imagens/home/baner.png';
+import visita from '../assets/imagens/home/visita.png';
+import adesivo from '../assets/imagens/home/adesivo.png';
+import brindes from '../assets/imagens/home/brindes.png';
+import folder from '../assets/imagens/home/folder.png';
 
 
 function Produtos() {
@@ -7,27 +17,27 @@ function Produtos() {
   {
     titulo: 'Banner Personalizado',
     descricao: 'Produção rápida e de alta qualidade para divulgar sua marca.',
-    imagem: '../assets/imagens/home/baner.png',
+    imagem: baner,
   },
   {
     titulo: 'Cartões de Visita',
     descricao: 'Impressione seus clientes com um cartão de visita profissional.',
-    imagem: '../assets/imagens/home/visita.png',
+    imagem: visita,
   },
   {
     titulo: 'Adesivos',
     descricao: 'Divulgue sua marca com adesivos criativos e duráveis.',
-    imagem: '../assets/imagens/home/adesivo.png',
+    imagem: adesivo,
   },
   {
     titulo: 'Brindes Corporativos',
     descricao: 'Crie conexão com seus clientes com brindes personalizados.',
-    imagem: '../assets/imagens/home/brindes.png',
+    imagem: brindes
   },
   {
     titulo: 'Folders & Panfletos',
     descricao: 'Material promocional impactante para divulgação de serviços.',
-    imagem: '../assets/imagens/home/folder.png',
+    imagem: folder,
   },
 ];
 
