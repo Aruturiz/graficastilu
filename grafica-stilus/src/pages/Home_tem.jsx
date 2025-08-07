@@ -52,28 +52,27 @@ function Home_tem() {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-t from-blue-500 to-blue-800 flex flex-col md:flex-row items-start justify-start p-10">
-        <img src={foto1} alt="Foto de destaque" className="ml-10 w-[400px] h-auto rounded-xl" />
-        <div className="ml-10">
-          <h1 className="font-medium text-amber-100 text-6xl text-left">
+        <img src={foto1} alt="Foto de destaque" className=" w-[400px] h-auto rounded-xl" />
+        <div className="ml-10 md:flex-row">
+          <h1 className="font-medium text-amber-100 text-2xl text-left md:text-6xl">
             A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos e decoração
           </h1>
-          <p className="text-amber-100 mt-10 leading-relaxed text-2xl">
+          <p className="text-amber-100 mt-10 leading-relaxed ">
             Somos apaixonados por transformar ideias em materiais que impressionam.
             Com tecnologia de ponta e uma equipe especializada, entregamos qualidade,
             agilidade e excelência em cada impressão. Seja qual for o tamanho do seu projeto,
             estamos prontos para fazer acontecer!
           </p>
           <a href="https://wa.me/558498649725">
-            <button className="bg-blue-400 w-70 h-12 rounded-3xl my-10 hover:border-amber-100 px-6">
-              <span className="text-amber-100 font-bold text-2xl">Fale conosco</span>
+            <button className="bg-blue-400 w-40 h-12 sm:w-70 rounded-3xl my-10 hover:bg-blue-700 cursor-auto px-6">
+              <span className="text-amber-100 font-bold md:text-2xl hover:bg">Fale conosco</span>
             </button>
           </a>
         </div>
       </div>
 
-      {/* Carrossel de Ofertas */}
       <div className="bg-gradient-to-t from-blue-600 to-blue-500 py-15">
-        <h1 className="text-center text-amber-100 text-5xl font-bold">OFERTAS</h1>
+        <h1 className="text-center text-amber-100 text-2xl md:text-5xl font-bold">OFERTAS</h1>
         <div className="overflow-hidden w-full">
           <div
             ref={listRef}
@@ -103,11 +102,11 @@ function Home_tem() {
 
       {/* Seção Serviços */}
       <div className="bg-gradient-to-t from-blue-700 to-blue-600 py-24">
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12">
-          <img src={grafico} alt="Gráfico" className="w-[500px] md:px-0" />
+        <div className="flex flex-col md:flex-row justify-center items-center md: gap-12">
+          <img src={grafico} alt="Gráfico" className="w-[50 ] md:px-0" />
           <div className="max-w-2xl">
-            <h1 className="text-7xl font-bold text-center text-amber-100 mb-12">Nossos Serviços</h1>
-            <p className="text-amber-100 text-2xl">
+            <h1 className="text-3xl md:text-6xl font-bold text-center text-amber-100 mb-12">Nossos Serviços</h1>
+            <p className="text-amber-100 md:text-2xl ">
               Se você procura qualidade e confiança para seus materiais gráficos,
               está no lugar certo. Aqui, cuidamos de cada detalhe para que seu projeto
               ganhe vida com o acabamento e a apresentação que ele merece. Produzimos
@@ -133,7 +132,7 @@ function Home_tem() {
 
       {/* Localização e Serviços Listados */}
       <section className="py-10 px-4 gap-6 sm:px-10 lg:px-20 bg-gradient-to-t from-blue-800 to-blue-700">
-        <h2 className="text-6xl font-bold text-amber-100 text-center p-10 mb-10">
+        <h2 className="text-2xl md:text-6xl font-bold text-amber-100 text-center p-10 mb-10">
           Onde Estamos Localizados
         </h2>
         <div className="flex flex-col lg:flex-row gap-10 justify-center items-center">

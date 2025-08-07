@@ -1,10 +1,5 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import foto1 from '../assets/imagens/home/foto1.jpg';
-import grafico from '../assets/imagens/home/grafico.png';
-import foto from '../assets/imagens/home/foto.png';
-import maquina2 from '../assets/imagens/home/maquina2.png';
-import maquina3 from '../assets/imagens/home/maquina3.png';
 import baner from '../assets/imagens/home/baner.png';
 import visita from '../assets/imagens/home/visita.png';
 import adesivo from '../assets/imagens/home/adesivo.png';
@@ -46,7 +41,7 @@ function Produtos() {
       <NavBar />
 
       {/* Cabeçalho da Página */}
-      <div className="relative min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-t to-blue-800 from-blue-700 text-amber-100 p-5">
+      <div className=" min-h-[20vh] flex flex-col justify-center items-center bg-gradient-to-t to-blue-800 from-blue-700 text-amber-100 p-5">
         <h1 className="text-5xl font-bold mb-4">Nossos Produtos</h1>
         
       </div>
