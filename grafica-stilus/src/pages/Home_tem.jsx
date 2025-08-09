@@ -57,7 +57,7 @@ function Home_tem() {
           <h1 className="font-medium text-amber-100 text-2xl text-left md:text-6xl">
             A <strong>Gráfica</strong> que você <br /> <strong>idealiza</strong> para seus <br /> projetos e decoração
           </h1>
-          <p className="text-amber-100 mt-10 leading-relaxed ">
+          <p className="text-amber-100 md:text-2 xl mt-10 leading-relaxed ">
             Somos apaixonados por transformar ideias em materiais que impressionam.
             Com tecnologia de ponta e uma equipe especializada, entregamos qualidade,
             agilidade e excelência em cada impressão. Seja qual for o tamanho do seu projeto,
