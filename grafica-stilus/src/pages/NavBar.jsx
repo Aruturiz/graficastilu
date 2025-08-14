@@ -7,31 +7,42 @@ function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
 
   return (
-    <nav className="text-white bg-blue-800">
-      <div className="flex justify-between items-center px-6 py-3">
+    <nav className="relative bg-blue-800 text-white">
+      <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link to="/home">
+          <Link to="/home" onClick={() => setMenuAberto(false)}>
             <img
               src={logo}
               alt="Logo"
-              className="w-20 h-20 rounded-full ml-4"
+              className="w-20 h-20 rounded-full ml-0 md:ml-4"
             />
           </Link>
         </div>
 
-        {/* Botão hambúrguer (visível só no mobile) */}
+        {/* Botão hambúrguer (só no mobile) */}
         <div className="md:hidden">
-          <button onClick={() => setMenuAberto(!menuAberto)}>
+          <button
+            aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={menuAberto}
+            onClick={() => setMenuAberto((v) => !v)}
+            className="p-2 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+          >
             {menuAberto ? <X size={30} /> : <Menu size={30} />}
           </button>
         </div>
 
-        {/* Menu de navegação */}
+        {/* Menu */}
         <ul
-          className={`flex flex-col md:flex-row md:space-x-5 space-y-4 md:space-y-0 absolute md:static bg-blue-800 md:bg-transparent left-0 w-full md:w-auto px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out ${
-            menuAberto ? 'top-20' : 'top-[-500px]'
-          }`}
+          className={
+            // Mobile: dropdown absoluto ocupando a largura; Desktop: menu inline
+            `
+            z-50
+            md:flex md:items-center md:space-x-5 md:static md:bg-transparent md:w-auto md:px-0 md:py-0
+            absolute left-0 right-0 top-full w-full bg-blue-800 px-6 py-4 border-t border-blue-700
+            ${menuAberto ? 'flex flex-col space-y-4' : 'hidden'}
+            `
+          }
         >
           <li className="hover:text-gray-200">
             <Link to="/home" onClick={() => setMenuAberto(false)}>Home</Link>
